@@ -1,0 +1,75 @@
+.model-selector {
+	position: relative;
+	width: 180px;
+}
+
+.selected-model {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 8px 12px;
+	background-color: rgba(255, 255, 255, 0.07);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	color: var(--text-primary);
+	font-size: 13px;
+	cursor: pointer;
+	transition: background-color var(--transition-speed);
+}
+
+.selected-model svg {
+	transition: transform var(--transition-speed);
+}
+
+.selected-model:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.models-dropdown {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	width: 100%;
+	background-color: var(--background-primary);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 10;
+	max-height: 200px;
+	overflow-y: auto;
+	animation: dropdown-fade 0.2s ease-in-out;
+}
+
+.model-option {
+	display: block;
+	width: 100%;
+	padding: 8px 12px;
+	text-align: left;
+	background-color: transparent;
+	border: none;
+	color: var(--text-primary);
+	font-size: 13px;
+	cursor: pointer;
+	transition: background-color var(--transition-speed);
+}
+
+.model-option:hover {
+	background-color: rgba(255, 255, 255, 0.07);
+}
+
+.model-option.selected {
+	background-color: rgba(140, 92, 245, 0.2);
+	color: var(--accent-primary);
+}
+
+@keyframes dropdown-fade {
+	from {
+		opacity: 0;
+		transform: translateY(-4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

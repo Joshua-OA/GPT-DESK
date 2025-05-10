@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--background-primary: rgba(22, 22, 26, 0.9);
+	--background-secondary: rgba(32, 32, 38, 0.7);
+	--text-primary: #ffffff;
+	--text-secondary: #a0a0b0;
+	--accent-primary: #8c5cf5;
+	--accent-secondary: #5c8cf5;
+	--border-radius: 12px;
+	--transition-speed: 0.2s;
+}
+
+body {
+	color: var(--text-primary);
+	font-size: 14px;
+	line-height: 1.5;
+	letter-spacing: 0.01em;
+	height: 100vh;
+	-webkit-app-region: drag;
+}
+
+/* Enable user selection in the app content */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div {
+	user-select: text;
+	cursor: text;
+}
+
+.message-content {
+	user-select: text;
+	cursor: text;
+	-webkit-user-select: text;
+}
+
+/* Inputs and buttons should not be draggable */
+input,
+button,
+textarea,
+a,
+.no-drag {
+	-webkit-app-region: no-drag;
+	user-select: text;
+}
+
+/* Make the app draggable everywhere except where specified */
+.no-drag {
+	-webkit-app-region: no-drag;
+}
+
+/* For scrollbar styling */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.3);
+}

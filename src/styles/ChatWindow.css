@@ -1,0 +1,48 @@
+.chat-window {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	-webkit-app-region: no-drag;
+}
+
+.model-selector-container {
+	padding: 8px 16px;
+	background-color: var(--background-secondary);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	-webkit-app-region: drag;
+}
+
+.messages-container {
+	flex: 1;
+	overflow-y: auto;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	-webkit-app-region: no-drag;
+	overflow-x: hidden;
+}
+
+.settings-button {
+	position: absolute;
+	top: 8px;
+	right: 16px;
+	background-color: transparent;
+	border: none;
+	color: var(--text-secondary);
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color var(--transition-speed);
+	-webkit-app-region: no-drag;
+	z-index: 100;
+}
+
+.settings-button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}

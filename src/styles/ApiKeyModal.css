@@ -1,0 +1,141 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	backdrop-filter: blur(5px);
+	animation: fade-in 0.2s ease-in-out;
+}
+
+.api-key-modal {
+	background-color: var(--background-primary);
+	border-radius: var(--border-radius);
+	padding: 24px;
+	width: 90%;
+	max-width: 400px;
+	box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.api-key-modal h2 {
+	margin: 0 0 16px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.modal-description {
+	color: var(--text-secondary);
+	margin-bottom: 24px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: var(--text-secondary);
+}
+
+.form-group input {
+	width: 100%;
+	padding: 12px;
+	background-color: rgba(255, 255, 255, 0.07);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	color: var(--text-primary);
+	font-family: inherit;
+	font-size: 14px;
+	transition: border-color var(--transition-speed),
+		background-color var(--transition-speed);
+}
+
+.form-group input:focus {
+	outline: none;
+	border-color: var(--accent-primary);
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-group input.error {
+	border-color: #f44336;
+}
+
+.error-message {
+	color: #f44336;
+	font-size: 12px;
+	margin-top: 8px;
+}
+
+.modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+	margin-top: 24px;
+}
+
+.cancel-button,
+.save-button {
+	padding: 10px 16px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color var(--transition-speed);
+}
+
+.cancel-button {
+	background-color: transparent;
+	color: var(--text-secondary);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cancel-button:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.save-button {
+	background-color: var(--accent-primary);
+	color: white;
+	border: none;
+}
+
+.save-button:hover {
+	background-color: var(--accent-secondary);
+}
+
+.help-text {
+	margin-top: 20px;
+	font-size: 12px;
+	color: var(--text-secondary);
+	text-align: center;
+}
+
+.help-text a {
+	color: var(--accent-primary);
+	text-decoration: none;
+	transition: color var(--transition-speed);
+}
+
+.help-text a:hover {
+	color: var(--accent-secondary);
+	text-decoration: underline;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
